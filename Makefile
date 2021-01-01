@@ -21,6 +21,9 @@ all: ${OBJECTS}
 %.o:%.cpp
 	g++ ${CFLAG} $< -o $@ $(LIB)
 
+install:
+	cp ${TERGET} /usr/bin/
+
 clean:
 	rm -rf ${OBJECTS} ${TERGET}
 

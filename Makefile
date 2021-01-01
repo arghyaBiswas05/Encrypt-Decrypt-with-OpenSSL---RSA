@@ -16,10 +16,10 @@ EXTRA_GEN_FILE += \
 
 
 all: ${OBJECTS}
-	g++ ${OBJECTS} -o ${TERGET} ${LIB}
+	${CXX} ${OBJECTS} -o ${TERGET} ${LIB}
 
 %.o:%.cpp
-	g++ ${CFLAG} $< -o $@ $(LIB)
+	${CXX} ${CFLAG} $< -o $@ $(LIB)
 
 install:
 	cp ${TERGET} /usr/bin/
